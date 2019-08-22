@@ -100,3 +100,7 @@ end
 clear intervals; clear m_space; 
 clear persistence; clear stream; 
 ``` 
+
+`barcode0_D` and `barcode1_D` have 4 cells, and each cell is a matrix of which row represents the zeroth and first holes, respectively, with the birth and death of thresholds.   
+The persistence diagram in `barcode1_D` can be plotted as follows: 
+
