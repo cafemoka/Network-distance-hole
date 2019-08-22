@@ -100,19 +100,3 @@ end
 clear intervals; clear m_space; 
 clear persistence; clear stream; 
 ``` 
-
-`barcode0_D` and `barcode1_D` have 4 cells, and each cell is a matrix of which row represents the zeroth and first holes, respectively, with the birth and death of thresholds.   
-The persistence diagram in `barcode1_D` can be plotted as follows: 
-
-```Matlab 
-figure; 
-for g = 1:4, 
-    subplot(1,4,g), 
-    line([0 80],[0 80]); hold on;  
-    scatter(barcode1_D{g}(:,1),barcode1_D{g}(:,2),10,'r','fill'); 
-    xlim([0 80]), ylim([0 80]); 
-end
-```
-
-![persistence_diagrams](https://user-images.githubusercontent.com/54297018/63508078-2dcdf180-c514-11e9-879d-130d85886942.png)
-
