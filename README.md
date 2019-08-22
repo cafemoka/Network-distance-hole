@@ -123,3 +123,22 @@ It first estimates the correspondence between points in two different persistenc
 
 ![Bottleneck_distance_estimation](https://user-images.githubusercontent.com/54297018/63508382-d419f700-c514-11e9-8ea8-042ee4820c22.png)
 
+
+We can estimate the bottleneck distance between two persistence diagrams as follows: 
+
+```Matlab 
+Dbot0 = zeros(4,4); 
+Dbot1 = zeros(4,4); 
+for g1 = 1:4,
+    for g2 = g1+1:4,
+        Dbot0(g1,g2) = bottleneck_distance([zeros(99,1) barcode0_D{g1}],[zeros(99,1) barcode0_D{g2}]);
+        Dbot1(g1,g2) = bottleneck_distance([barcode1_D{g1}],[barcode1_D{g2}]);
+    end 
+end 
+
+figure; 
+subplot(1,2,1), imagesc(Dbot0); 
+subplot(1,2,2), imagesc(Dbot1); 
+colormap(gray); 
+``` 
+
