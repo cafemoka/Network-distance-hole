@@ -116,30 +116,3 @@ end
 
 ![persistence_diagrams](https://user-images.githubusercontent.com/54297018/63508078-2dcdf180-c514-11e9-879d-130d85886942.png)
 
-
-The bottleneck distance is a distance between two different persistence diagrams. 
-It first estimates the correspondence between points in two different persistence diagrams that minimizes the total sum of distances, and chooses the maximum distance among all pairs of points in the persistence diagrams. 
-
-![Bottleneck_distance_estimation](https://user-images.githubusercontent.com/54297018/63508382-d419f700-c514-11e9-8ea8-042ee4820c22.png)
-
-We can estimate the bottleneck distance between two persistence diagrams as follows: 
-
-```Matlab 
-Dbot0 = zeros(4,4); 
-Dbot1 = zeros(4,4); 
-for g1 = 1:4,
-    for g2 = g1+1:4,
-        Dbot0(g1,g2) = bottleneck_distance([zeros(99,1) barcode0_D{g1}],[zeros(99,1) barcode0_D{g2}]);
-        Dbot1(g1,g2) = bottleneck_distance([barcode1_D{g1}],[barcode1_D{g2}]);
-    end 
-end 
-
-figure; 
-subplot(1,2,1), imagesc(Dbot0); 
-subplot(1,2,2), imagesc(Dbot1); 
-colormap(gray); 
-``` 
-
-![Bottleneck_distance](https://user-images.githubusercontent.com/54297018/63508414-e300a980-c514-11e9-98a2-e2c4d8da0148.png)
-
-
