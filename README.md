@@ -122,7 +122,7 @@ It first estimates the correspondence between points in two different persistenc
 
 ![Bottleneck_distance_estimation](https://user-images.githubusercontent.com/54297018/63508382-d419f700-c514-11e9-8ea8-042ee4820c22.png)
 
-Then, we can estimate the bottleneck distance between two persistence diagrams as follows: 
+We can estimate the bottleneck distance between two persistence diagrams as follows: 
 
 ```Matlab 
 Dbot0 = zeros(4,4); 
@@ -142,4 +142,5 @@ colormap(gray);
 
 ![Bottleneck_distance](https://user-images.githubusercontent.com/54297018/63508414-e300a980-c514-11e9-98a2-e2c4d8da0148.png)
 
+`Dbot0` on the left is a bottleneck distance between two persistence diagrams of the zeroth homology group, and `Dbot1` on the right is a bottleneck distance between two persistence diagrams of the first homology group. 
 
