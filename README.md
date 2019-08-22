@@ -121,3 +121,5 @@ end
 The bottleneck distance is a distance between two different persistence diagrams. 
 It first estimates the correspondence between points in two different persistence diagrams that minimizes the total sum of distances, and chooses the maximum distance among all pairs of points in the persistence diagrams.   
 
+![Bottleneck_distance_estimation](https://user-images.githubusercontent.com/54297018/63508382-d419f700-c514-11e9-8ea8-042ee4820c22.png)
+
