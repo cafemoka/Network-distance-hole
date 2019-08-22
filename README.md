@@ -142,3 +142,7 @@ subplot(1,2,2), imagesc(Dbot1);
 colormap(gray); 
 ``` 
 
+![Bottleneck_distance](https://user-images.githubusercontent.com/54297018/63508414-e300a980-c514-11e9-98a2-e2c4d8da0148.png)
+
+`Dbot0` on the left is a bottleneck distance between two persistence diagrams of the zeroth homology group, and `Dbot1` on the right is a bottleneck distance between two persistence diagrams of the first homology group. 
+
